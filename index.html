@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        /* Container for the stars in each cell */
+        .star-rating {
+        display: flex;
+        flex-direction: row-reverse; /* Flips the logic for CSS selection */
+        justify-content: flex-end;   /* Keeps them aligned to the left */
+        }
+
+        .star {
+        font-size: 25px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        filter: brightness(1.2) saturate(0.7); /* Normal state: slightly dimmer */
+        }
+
+        /* When a star is hovered, highlight it AND all "following" (visually preceding) stars */
+        .star:hover,
+        .star:hover ~ .star {
+        filter: brightness(1.5) drop-shadow(0 0 5px Pink); /* Shines and brightens */
+        transform: scale(1.4);
+        }
+        .five-dots {
+            height: 10px; /* Controls the size of the dots */
+            width: 150px; /* Controls the overall width of the dots container */
+            background-image: radial-gradient(circle, black 100%, transparent 0%);
+            background-size: 10px 10px; /* Controls the dot size and spacing */
+            background-repeat: space no-repeat; /* Distributes dots evenly without repeating on Y axis */
+            display: flex; /* Helps in alignment if needed */
+            justify-content: space-between; /* Ensures even space between the dots */
+            background-position: center; /* Centers the pattern vertically */
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="20">
+        <tr>
+            <td><img src="C:\Users\varsh\Downloads\Documents\Web Development\Personal Website Using HTML\Web-Development-Personal\cropped_circle_image.png" alt="Anmol Profile Picture" width="250" height="250"></td>
+            <td><h1>Anmol Varshney</h1>
+            <p>Welcome to my personal website! I am a <strong>full-stack</strong> software developer with a passion for creating innovative solutions. Here you can find information about my projects, skills, and contact details.</p></td>
+        </tr>
+    </table>
+    <div class="five-dots"></div>
+    <h3>Education</h3>
+    <ul>
+        <li><strong>Bachelor of Science in Data Science and Applications</strong> - IIT Madras (2021-2025)</li>
+        <li><strong>Bachelor of Science in Mathematics</strong> - MJP Rohilkhand University (2020-2023)</li>
+    </ul>
+    <h3>Projects</h3>
+    <ul>
+        <li><a href="MCP Server">MCP Server</a></li>
+        <li><a href="Project 2">App Development</a></li>
+        <li><a href="project3.html">Project 3</a></li>
+    </ul>
+    <h3>Skills</h3>
+    <table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <td>Programming Languages:</td>
+        <td>Python, JavaScript, Java</td>
+        <td>
+            <div class="star-rating">
+                <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Frameworks:</td>
+        <td>React, Node.js, Django</td>
+        <td>
+            <div class="star-rating">
+                <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Tools:</td>
+        <td>Git, Docker, AWS</td>
+        <td>
+            <div class="star-rating">
+                <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+            </div>
+        </td>
+    </tr>
+    </table>
+    <div class="five-dots"></div>
+    <h2><a href="contact.html">Contact Information</a></h2>
+</body>
+</html>
